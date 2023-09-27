@@ -1,0 +1,12 @@
+
+<h1> TODO App </h1>
+
+<input [(ngModel)]="inputvalue" placeholder="Enter todo here"> 
+<button (click)="AddItem()"> Add </button>
+
+<div *ngFor="let item of todoItem">
+	<li>
+		<input type="checkbox" ng-checked="item.checked"> {{ item.activity }} {{ item.checked }}
+		<div *ngIf="item.checked"> (( Completed )) </div>
+	</li>
+</div>
